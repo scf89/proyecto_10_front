@@ -1,0 +1,85 @@
+.add-event-icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: #007bff;
+  }
+  
+  .add-event-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Estilo del formulario */
+  #event-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    min-height: 80vh;  /* Usamos min-height en lugar de height para asegurar que el formulario se ajuste correctamente */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  #event-form input, #event-form textarea, #event-form button {
+    width: 100%;  /* Hacemos que los inputs y el botón tengan el 100% de ancho */
+    max-width: 400px;  /* Limitamos el ancho máximo para que no se estiren demasiado */
+    border-radius: 20px;
+    padding: 20px;
+    border: none;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+  }
+  
+  #event-form button {
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  #event-form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Estilo para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

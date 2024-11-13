@@ -1,0 +1,150 @@
+
+
+/* Estructura principal para los eventos */
+.evento {
+    width: 300px;
+    max-height: 450px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+/* Imagen de evento */
+.evento > img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* Información adicional del evento */
+.evento > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Contenedor de eventos */
+.eventos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Icono de asistencia al evento */
+.evento > .like {
+    width: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    color: #00078b;
+}
+
+/* Efecto hover en el icono de asistencia */
+.evento > .like:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos adicionales para el título, fecha y descripción */
+/* Título del evento */
+.evento h3 {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  display: -webkit-box;
+  display: box; 
+  -webkit-line-clamp: 2; 
+  line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  box-orient: vertical; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-height: 3em;
+  margin: 30px 0 10px;
+}
+
+/* Descripción del evento */
+.evento .descripcion {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  display: -webkit-box;
+  display: box;
+  -webkit-line-clamp: 3; 
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-height: 4.5em;
+  margin: 5px 0;
+}
+
+
+.evento p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin: 5px 0;
+}
+
+
+.modal {
+    display: none; /* Inicialmente no se muestra */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
+    justify-content: center;  /* Centrar el contenido verticalmente */
+    align-items: center;      /* Centrar el contenido horizontalmente */
+    display: flex;            /* Usar flexbox para centrar */
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;                /* Ajusta el ancho según sea necesario */
+    max-width: 600px;          /* Tamaño máximo del modal */
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  #modal-attendees ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #modal-map {
+    height: 300px;  /* Ajusta la altura según tus necesidades */
+    width: 100%;    /* Ancho completo del contenedor */
+    border-radius: 5px;
+    margin-top: 15px;
+  }
