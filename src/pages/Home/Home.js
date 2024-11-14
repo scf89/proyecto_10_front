@@ -6,7 +6,13 @@ import L from "leaflet";
 import 'leaflet/dist/leaflet.css';
 import { showNotification } from "../../components/Notification/Notification";
 
-
+// FIX leaflet's default icon path problems with webpack
+delete L.Icon.Default.prototype._getIconUrl
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'images/marker-icon-2x.png',
+  iconUrl: 'images/marker-icon.png',
+  shadowUrl: 'images/marker-shadow.png'
+})
 
 export const Home = async () => {
   const main = document.querySelector("main");
